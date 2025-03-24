@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>COMP 3962 - Assignment 3</title>
     <!-- Amazon Cognito Identity SDK -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/amazon-cognito-identity-js/6.2.0/amazon-cognito-identity.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/amazon-cognito-identity-js@6.2.0/dist/amazon-cognito-identity.min.js"></script>
+
+
 </head>
+
 <body>
     <h1>Hello from COMP 3962</h1>
     <h2>Assignment #3</h2>
+
+    <!-- Login Form -->
+    <h3>Log In</h3>
     <form onsubmit="event.preventDefault(); loginUser();">
         <input type="text" id="username" placeholder="Enter Username">
         <input type="password" id="password" placeholder="Enter Password">
         <button type="submit">Login</button>
     </form>
+
+    <!-- Signup Form -->
+    <h3>Sign Up</h3>
+    <form onsubmit="event.preventDefault(); signUpUser();">
+        <input type="text" id="signup-username" placeholder="Enter Username" required>
+        <input type="password" id="signup-password" placeholder="Enter Password" required>
+        <input type="email" id="signup-email" placeholder="Enter Email" required>
+        <input type="text" id="signup-address" placeholder="Enter Address" required>
+        <button type="submit">Sign Up</button>
+    </form>
+
     <script src="script.js"></script>
 </body>
+
 </html>
