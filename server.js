@@ -8,9 +8,9 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
-app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
-app.get('/home', (req, res) => res.sendFile(__dirname + '/home.html'));
-app.get('/help', (req, res) => res.sendFile(__dirname + '/help.html'));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public/index.html')));
+app.get('/home', (req, res) => res.sendFile(path.join(__dirname, 'public/home.html')));
+app.get('/help', (req, res) => res.sendFile(path.join(__dirname, 'public/help.html')));
 
 // Start the server
 app.listen(PORT, () => {
